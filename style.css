@@ -1,0 +1,133 @@
+/* ==========================================================
+   ANAVI - estilos personalizados (complementam o Tailwind)
+   ========================================================== */
+
+/* Logo */
+.anavi-logo-text {
+    font-family: 'Shrikhand', cursive, sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ímã realista 5x5 cm (imagem inteira + brilho de laminação) */
+.magnet-realistic {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.28), 0 6px 12px -4px rgba(0, 0, 0, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.magnet-realistic::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.18) 100%);
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+/* Levanta o ímã ao passar o mouse no cartão ou na geladeira */
+.group:hover .magnet-realistic,
+.fridge-surface .magnet-realistic:hover {
+    transform: translateY(-4px) rotate(-1.5deg);
+}
+
+/* Superfície metálica (geladeira) do hero */
+/* Animación del degradado en movimiento */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Superfície con degradado animado */
+.fridge-surface {
+    /* Degradado de 4 colores llamativos pero armónicos (turquesa, violeta oscuro, azul noche, turquesa profundo) */
+    background: linear-gradient(-45deg, #0f7a80, #1eb5bd, #312e81, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    box-shadow: 0 20px 40px -10px rgba(15, 122, 128, 0.4), inset 0 0 30px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Navegação: estado ativo via aria-current (definido pelo router em script.js) */
+.nav-link {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    transition: color 0.2s ease;
+}
+.nav-link:hover { color: #0f7a80; }
+.nav-link[aria-current="page"] {
+    color: #0f7a80;
+    box-shadow: inset 0 -2px 0 #0f7a80;
+}
+.mobile-link[aria-current="page"] { color: #0f7a80; }
+
+/* Transição suave entre "páginas" */
+.page-tab { animation: pageIn 0.2s ease; }
+@keyframes pageIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+/* Selo do carrinho "pulsa" ao adicionar item */
+@keyframes bump { 40% { transform: scale(1.35); } }
+.bump { animation: bump 0.35s ease; }
+
+/* O foco do <main> é só para leitores de tela após trocar de página */
+#main:focus { outline: none; }
+
+/* Foco visível para teclado */
+:focus-visible {
+    outline: 3px solid #0f7a80;
+    outline-offset: 2px;
+}
+
+/* Respeita quem reduz animações no sistema */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Fondo llamativo para todo el cuerpo de la página */
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 40%, #e8f8f9 70%, #b2ebf2 100%) !important;
+    background-attachment: fixed !important;
+}
+
+/* Quita los fondos sólidos de las secciones principales para que se vea el fondo */
+main, 
+#page-inicio, 
+#page-produtos, 
+#page-contato,
+.bg-gradient-to-b {
+    background: transparent !important;
+}
+/* Fondo exclusivo de Mariposas para la sección Sobre Nós */
+#page-sobre {
+    position: relative;
+    background-color: #f4fbfb !important;
+    /* Patrón vectorial sutil de mariposas */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 100 100'%3E%3Cpath fill='%231eb5bd' fill-opacity='0.12' d='M50,45 C42,30 20,25 25,42 C28,52 45,52 50,48 C55,52 72,52 75,42 C80,25 58,30 50,45 Z M50,52 C44,62 30,68 35,76 C38,82 48,72 50,56 C52,72 62,82 65,76 C70,68 56,62 50,52 Z'/%3E%3C/svg%3E"), 
+                      radial-gradient(circle at 50% 20%, #e0f7fa 0%, #f4fbfb 60%, #e8f8f9 100%) !important;
+    background-size: 100px 100px, cover !important;
+}
+
+/* Efecto de marco delicado alrededor de la historia */
+#page-sobre .bg-white\/90 {
+    border: 2px solid rgba(30, 181, 189, 0.2) !important;
+    box-shadow: 0 20px 40px -15px rgba(15, 122, 128, 0.15) !important;
+}

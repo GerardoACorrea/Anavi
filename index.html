@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANAVI | Ímãs Personalizados 5x5 cm de Imagem Inteira</title>
+    <meta name="description" content="Ímãs personalizados 5x5 cm com a sua foto em imagem inteira, manta magnética em 100% do verso e laminação brilhante resistente à água. Kits a partir de R$ 29,90.">
+    <meta name="theme-color" content="#1eb5bd">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231eb5bd'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle'%3E🧲%3C/text%3E%3C/svg%3E">
+
+    <!-- TROCAR "SEU-DOMINIO.com.br" pelo domínio real antes de publicar -->
+    <link rel="canonical" href="https://SEU-DOMINIO.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="ANAVI">
+    <meta property="og:title" content="ANAVI | Ímãs Personalizados 5x5 cm de Imagem Inteira">
+    <meta property="og:description" content="Suas fotos viram ímãs 5x5 cm com manta magnética total e brilho impermeável.">
+    <meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+    <meta property="og:image" content="https://SEU-DOMINIO.com.br/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS (CDN). Para produção, compile com a CLI (veja instruções no final da conversa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        anavi: {
+                            DEFAULT: '#1eb5bd',      /* decorativo: bordas, fundos, ícones grandes */
+                            dark: '#14898f',
+                            light: '#e8f8f9',
+                            soft: '#a1e4e7',
+                            accent: '#ff6b6b',
+                            bg: '#f4fbfb',
+                            cta: '#0f7a80',          /* botões e textos pequenos (contraste ~5:1 com branco) */
+                            'cta-dark': '#0b5f64'
+                        }
+                    },
+                    fontFamily: {
+                        logo: ['Shrikhand', 'cursive', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 flex flex-col min-h-screen">
+
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:text-anavi-cta focus:font-bold focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">Pular para o conteúdo</a>
+    <div id="liveStatus" class="sr-only" role="status" aria-live="polite"></div>
+
+    <!-- Cabeçalho -->
+    <header data-bg class="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-4">
+
+            <a href="#/" aria-label="ANAVI, ir para o início" class="flex items-center group">
+    <span class="anavi-logo-text text-4xl font-normal leading-none tracking-wide text-anavi-cta transition-transform group-hover:scale-105">Anavi</span>
+</a>
+
+                <!-- Busca (desktop) -->
+                <div class="hidden md:flex flex-1 max-w-xl mx-4" role="search">
+                    <div class="relative w-full">
+                        <label for="searchDesktop" class="sr-only">Buscar kits de ímãs</label>
+                        <input type="search" id="searchDesktop" autocomplete="off" placeholder="Buscar kits de ímãs 5x5cm, lembrancinhas..." class="js-search w-full pl-4 pr-10 py-2.5 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:border-anavi-cta focus:bg-white text-sm transition">
+                        <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-anavi-cta" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 sm:gap-6">
+                    <nav class="hidden lg:flex items-center gap-6 font-semibold text-sm" aria-label="Principal">
+    <a href="#/" data-route="inicio" class="nav-link">Início</a>
+    <a href="#/produtos" data-route="produtos" class="nav-link flex items-center gap-1.5">
+        <span>Ímãs Personalizados</span>
+        <span class="bg-anavi-cta text-white text-xs font-extrabold px-1.5 py-0.5 rounded-md">5x5 cm</span>
+    </a>
+    <a href="#/sobre" data-route="sobre" class="nav-link">Sobre Nós</a>
+    <a href="#/contato" data-route="contato" class="nav-link">Contato</a>
+</nav>
+
+                    <button id="cartBtn" data-action="open-cart" type="button" aria-label="Abrir carrinho, 0 itens" class="relative p-2.5 w-11 h-11 flex items-center justify-center bg-anavi-light text-anavi-cta rounded-full hover:bg-anavi-cta hover:text-white transition shadow-sm">
+                        <i class="fa-solid fa-bag-shopping text-xl" aria-hidden="true"></i>
+                        <span id="cartBadge" aria-hidden="true" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+
+                    <button id="menuBtn" data-action="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden w-11 h-11 flex items-center justify-center text-gray-700 hover:text-anavi-cta">
+                        <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Busca (mobile) -->
+            <div class="md:hidden pb-3" role="search">
+                <div class="relative">
+                    <label for="searchMobile" class="sr-only">Buscar kits de ímãs</label>
+                    <input type="search" id="searchMobile" autocomplete="off" placeholder="Buscar kits de ímãs..." class="js-search w-full pl-4 pr-10 py-2.5 bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:border-anavi-cta focus:bg-white text-sm transition">
+                    <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-anavi-cta" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <nav id="mobileMenu" aria-label="Menu móvel" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 font-semibold">
+            <a href="#/" data-route="inicio" class="mobile-link block py-3 text-gray-700 hover:text-anavi-cta">Início</a>
+            <a href="#/produtos" data-route="produtos" class="mobile-link block py-3 text-gray-700 hover:text-anavi-cta">Ímãs Personalizados 5x5 cm</a>
+            <a href="#/sobre" data-route="sobre" class="mobile-link block py-3 text-gray-700 hover:text-anavi-cta">Sobre Nós</a>
+            <a href="#/contato" data-route="contato" class="mobile-link block py-3 text-gray-700 hover:text-anavi-cta">Contato e Atendimento</a>
+        </nav>
+    </header>
+
+    <!-- Carrinho lateral -->
+    <div id="cartOverlay" data-action="close-cart" aria-hidden="true" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+    <aside id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" inert class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-5 border-b border-gray-100 flex items-center justify-between">
+            <h2 id="cartTitle" class="text-2xl font-bold text-gray-800">Carrinho</h2>
+            <button type="button" data-action="close-cart" aria-label="Fechar carrinho" class="text-gray-500 hover:text-gray-800 text-xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-5">
+            <div id="cartShipping"></div>
+            <div id="cartDrawerItems" class="space-y-4"></div>
+            <div id="cartUpsell"></div>
+        </div>
+
+        <div class="p-5 bg-white border-t border-gray-100 space-y-3">
+            <div class="flex items-center justify-between text-gray-800">
+                <span class="text-lg font-bold">Subtotal</span>
+                <span id="cartDrawerSubtotal" class="text-xl font-extrabold text-anavi-dark">R$ 0,00</span>
+            </div>
+
+            <div>
+                <label for="customerName" class="block text-xs font-semibold text-gray-700 mb-1">Seu nome <span class="text-red-600">*</span></label>
+                <input type="text" id="customerName" autocomplete="name" aria-describedby="nameError" class="w-full px-3 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:border-anavi-cta">
+                <p id="nameError" role="alert" class="hidden text-xs text-red-600 mt-1">Informe seu nome para abrir a conversa no WhatsApp.</p>
+            </div>
+            <div>
+                <label for="customerNotes" class="block text-xs font-semibold text-gray-700 mb-1">Observações (opcional)</label>
+                <textarea id="customerNotes" rows="2" placeholder="Ex.: data do evento, nomes que devem aparecer..." class="w-full px-3 py-2 border border-gray-300 rounded-xl text-sm focus:outline-none focus:border-anavi-cta"></textarea>
+            </div>
+
+            <button id="checkoutBtn" type="button" data-action="checkout" disabled class="w-full bg-anavi-cta hover:bg-anavi-cta-dark disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-xl shadow-md transition text-base flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl" aria-hidden="true"></i> Finalizar compra via WhatsApp
+            </button>
+            <p class="text-xs text-gray-600 text-center">Nada é cobrado agora: pagamento e envio das fotos são combinados no WhatsApp.</p>
+        </div>
+    </aside>
+
+  <!-- Botões flutuantes de Redes Sociais e WhatsApp -->
+<div class="fixed bottom-5 right-5 z-30 flex flex-col gap-3 items-center">
+    <!-- Botão TikTok -->
+    <a href="https://www.tiktok.com/@giftsanavi" target="_blank" rel="noopener" aria-label="Siga a ANAVI no TikTok" class="w-12 h-12 bg-black hover:bg-gray-800 text-white rounded-full shadow-xl flex items-center justify-center text-2xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+    </a>
+
+    <!-- Botão Instagram -->
+    <a href="https://www.instagram.com/giftsanavi/" target="_blank" rel="noopener" aria-label="Siga a ANAVI no Instagram" class="w-12 h-12 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 hover:opacity-90 text-white rounded-full shadow-xl flex items-center justify-center text-2xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+    </a>
+
+    <!-- Botão WhatsApp -->
+    <a data-bg data-wa="Olá ANAVI! Gostaria de saber mais sobre os ímãs personalizados." target="_blank" rel="noopener" aria-label="Falar com a ANAVI no WhatsApp" class="w-14 h-14 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-xl flex items-center justify-center text-3xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="main" data-bg tabindex="-1" class="flex-grow">
+
+        <!-- PÁGINA 1: INÍCIO -->
+        <section id="page-inicio" class="page-tab">
+<!-- Carrossel de banners -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+    <div id="bannerCarousel" class="relative overflow-hidden rounded-2xl shadow-lg"
+         role="region" aria-roledescription="carrossel" aria-label="Promoções">
+        <div id="bannerTrack" class="flex transition-transform duration-500 ease-out">
+            <a href="#/produtos" class="w-full shrink-0" aria-label="Sua primeira compra com 5% OFF">
+                <img src="imagenes/banner-anavi-1.webp" alt="Sua primeira compra com 5% OFF em ímãs personalizados"
+                     width="1200" height="500" class="w-full h-auto block">
+            </a>
+            <a href="#/produtos" class="w-full shrink-0" aria-label="Mega sale, cupom PRIMEIRACOMPRA">
+                <img src="imagenes/banner-anavi-2.webp" alt="Mega sale: use o cupom PRIMEIRACOMPRA"
+                     width="1200" height="500" class="w-full h-auto block" loading="lazy">
+            </a>
+        </div>
+
+        <button id="bannerPrev" type="button" aria-label="Banner anterior"
+                class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-gray-800 shadow flex items-center justify-center">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button id="bannerNext" type="button" aria-label="Próximo banner"
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-gray-800 shadow flex items-center justify-center">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+
+        <div id="bannerDots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"></div>
+    </div>
+</div>
+            <!-- Hero -->
+            <div class="bg-gradient-to-b from-anavi-bg via-white to-gray-50 py-12 px-4 sm:px-6 lg:px-8 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 items-center">
+
+                    <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                        <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 leading-tight">
+                            Suas fotos viram ímãs 5x5 cm, com a imagem até a borda
+                        </h1>
+                        <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+                            Ímãs fotográficos personalizados para a geladeira, lembrancinhas e presentes: foto em 100% da superfície, manta magnética total e brilho resistente à água.
+                        </p>
+
+                        <div class="pt-1 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#/produtos" class="bg-anavi-cta hover:bg-white text-white hover:text-anavi-cta border-2 border-anavi-cta font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-base">
+    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Escolher meu kit
+</a>
+                      <a data-wa="Olá ANAVI! Gostaria de saber mais sobre os ímãs personalizados." target="_blank" rel="noopener" class="group bg-white hover:bg-anavi-cta text-gray-700 hover:text-white font-bold px-8 py-4 rounded-xl border-2 border-gray-300 hover:border-anavi-cta shadow-sm transition-all duration-300 flex items-center justify-center gap-2 text-base">
+    <i class="fa-brands fa-whatsapp text-green-600 group-hover:text-white text-lg transition-colors duration-300" aria-hidden="true"></i> Tirar dúvidas
+</a>
+                        </div>
+
+                        <ol class="bg-white p-4 rounded-2xl border border-gray-200 shadow-sm space-y-3 text-left">
+                            <li class="flex items-center gap-3">
+                                <span class="w-9 h-9 rounded-full bg-anavi-cta text-white font-bold text-sm flex items-center justify-center shrink-0">1</span>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-800">Escolha o seu kit de ímãs</p>
+                                    <p class="text-xs text-gray-600">Selecione a quantidade ideal para guardar ou presentear.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-3 border-t border-gray-100 pt-3">
+                                <span class="w-9 h-9 rounded-full bg-anavi-cta text-white font-bold text-sm flex items-center justify-center shrink-0">2</span>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-800">Finalize pelo carrinho</p>
+                                    <p class="text-xs text-gray-600">Você abre a conversa no WhatsApp com o pedido já preenchido.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-3 border-t border-gray-100 pt-3">
+                                <span class="w-9 h-9 rounded-full bg-anavi-cta text-white font-bold text-sm flex items-center justify-center shrink-0">3</span>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-800">Envie as fotos e confirme</p>
+                                    <p class="text-xs text-gray-600">Mandamos o prazo e a forma de pagamento pelo WhatsApp. 📲</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Ímãs na geladeira -->
+                    <div class="lg:col-span-6">
+                        <figure class="fridge-surface rounded-3xl p-4 sm:p-6 shadow-xl">
+                            <div class="relative mx-auto w-full max-w-md aspect-square">
+                                <div class="absolute w-[30%] left-[6%] top-[6%] -rotate-6">
+                                    <div class="magnet-realistic aspect-square"><img src="imagenes/iman 2.jpg" alt="" width="300" height="300" class="w-full h-full object-cover"></div>
+                                </div>
+                                <div class="absolute w-[30%] left-[64%] top-[4%] rotate-[5deg]">
+                                    <div class="magnet-realistic aspect-square"><img src="imagenes/iman 3.jpg" alt="" width="300" height="300" class="w-full h-full object-cover"></div>
+                                </div>
+                                <div class="absolute w-[30%] left-[5%] top-[64%] rotate-[4deg]">
+                                    <div class="magnet-realistic aspect-square"><img src="imagenes/iman 4.jpg" alt="" width="300" height="300" class="w-full h-full object-cover"></div>
+                                </div>
+                                <div class="absolute w-[30%] left-[66%] top-[66%] -rotate-[5deg]">
+                                    <div class="magnet-realistic aspect-square"><img src="imagenes/iman 5.jpg" alt="" width="300" height="300" class="w-full h-full object-cover"></div>
+                                </div>
+                                <!-- Ímã central: troque pela sua foto real (img/exemplo-ima.webp) -->
+                                <div class="absolute w-[46%] left-[27%] top-[27%] rotate-2 z-10">
+                                    <div class="magnet-realistic aspect-square bg-white">
+                                        <img src="imagenes/iman 1.jpg" alt="Exemplo de ímã ANAVI 5x5 cm com foto de imagem inteira" width="600" height="600" fetchpriority="high"
+                                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80'"
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption class="mt-5 text-xs text-gray-700 font-bold bg-white/90 py-2.5 px-4 rounded-xl border border-white text-center">
+                                ✨ Verso com manta magnética total + brilho fotográfico impecável
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparativo: ímã comum vs ANAVI -->
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center">Qual é a diferença de um ímã ANAVI?</h2>
+                <p class="text-gray-600 text-center mt-2 max-w-2xl mx-auto text-sm">Sua foto ocupa toda a face do ímã e o magnetismo cobre todo o verso, então ele gruda firme e não descola nas pontas.</p>
+
+                <div class="grid grid-cols-2 gap-6 sm:gap-10 max-w-2xl mx-auto mt-10">
+                    <div class="text-center">
+                        <div class="bg-white p-4 sm:p-5 rounded-md shadow-md aspect-square">
+                            <img src="imagenes/iman bebe.jpg" alt="Exemplo de ímã comum, com borda branca ao redor da foto" width="400" height="400" loading="lazy" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-4 font-bold text-gray-700 text-sm"><i class="fa-solid fa-circle-xmark text-red-600 mr-1" aria-hidden="true"></i> Ímã comum</p>
+                        <p class="text-xs text-gray-600">Borda branca e ímã só no centro</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="magnet-realistic aspect-square">
+                            <img src="imagenes/iman bebe.jpg" alt="Exemplo de ímã ANAVI, com a foto preenchendo toda a superfície" width="400" height="400" loading="lazy" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-4 font-bold text-gray-900 text-sm"><i class="fa-solid fa-circle-check text-anavi-cta mr-1" aria-hidden="true"></i> Ímã ANAVI</p>
+                        <p class="text-xs text-gray-600">Imagem até a borda e manta magnética total</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kits em destaque -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+                <div class="flex justify-between items-end mb-8">
+                    <div>
+                        <p class="text-xs font-bold text-anavi-cta uppercase tracking-wider">Mais vendidos</p>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">Kits em destaque</h2>
+                    </div>
+                    <a href="#/produtos" class="text-anavi-cta hover:text-anavi-cta-dark font-bold text-sm flex items-center gap-1">
+                        Ver todos <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div id="homeFeaturedGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+            </div>
+
+            <!--
+              PROVA SOCIAL: quando tiver depoimentos REAIS de clientes (prints do WhatsApp, fotos de ímãs
+              em geladeiras), crie aqui uma seção <section> com 3 ou 4 cartões. Não invente depoimentos.
+            -->
+
+            <!-- Perguntas frequentes -->
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center mb-8">Perguntas frequentes</h2>
+                <div class="space-y-3">
+                    <details class="group bg-white border border-gray-200 rounded-xl p-4">
+                        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center gap-3">
+                            Como envio as fotos?
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-500 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-3 leading-relaxed">Depois de finalizar o carrinho, a conversa abre no WhatsApp com o seu pedido. É só mandar as fotos por lá. Prefira o arquivo original da galeria em vez de prints, para a melhor qualidade de impressão.</p>
+                    </details>
+                    <details class="group bg-white border border-gray-200 rounded-xl p-4">
+                        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center gap-3">
+                            Qual é o tamanho e o acabamento dos ímãs?
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-500 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-3 leading-relaxed">Todos medem 5x5 cm, com a foto preenchendo 100% da superfície, laminação brilhante resistente à água e arranhões, e manta magnética de alta aderência em todo o verso.</p>
+                    </details>
+                    <details class="group bg-white border border-gray-200 rounded-xl p-4">
+                        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center gap-3">
+                            Qual é o prazo de produção e entrega?
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-500 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-3 leading-relaxed">Informamos o prazo exato pelo WhatsApp ao confirmar o seu pedido, de acordo com o tamanho do kit e o seu endereço.</p>
+                    </details>
+                    <details class="group bg-white border border-gray-200 rounded-xl p-4">
+                        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center gap-3">
+                            Como funciona o frete grátis?
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-500 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-3 leading-relaxed">Compras acima de R$ 99 têm frete grátis para todo o Brasil. O carrinho mostra quanto falta para você chegar lá.</p>
+                    </details>
+                    <details class="group bg-white border border-gray-200 rounded-xl p-4">
+                        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center gap-3">
+                            Como pago?
+                            <i class="fa-solid fa-chevron-down text-xs text-gray-500 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+                        </summary>
+                        <p class="text-sm text-gray-600 mt-3 leading-relaxed">Nada é cobrado no site. Combinamos a forma de pagamento com você pelo WhatsApp, depois de receber as suas fotos.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 2: CATÁLOGO -->
+        <section id="page-produtos" class="page-tab hidden">
+            <div class="bg-anavi-light/50 py-8 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <p class="inline-block bg-anavi-cta text-white text-xs font-bold px-3 py-1 rounded-full uppercase mb-2">
+                        <i class="fa-solid fa-layer-group mr-1" aria-hidden="true"></i> Catálogo completo
+                    </p>
+                    <h1 class="text-3xl font-extrabold text-gray-900">Ímãs Personalizados 5x5 cm</h1>
+                    <p class="text-gray-600 mt-2 max-w-xl mx-auto text-sm">
+                        Escolha seu kit favorito de ímãs de imagem inteira. Manta magnética de altíssima fixação em 100% da superfície traseira.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <p id="resultsInfo" role="status" class="text-sm text-gray-600 mb-4 min-h-[1.25rem]"></p>
+                <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+            </div>
+        </section>
+<!-- PÁGINA: SOBRE NÓS -->
+<section id="page-sobre" class="page-tab hidden">
+    <div class="bg-anavi-light/40 py-12 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="inline-block bg-anavi-cta text-white text-xs font-bold px-3.5 py-1.5 rounded-full uppercase mb-2">
+                <i class="fa-solid fa-heart mr-1" aria-hidden="true"></i> Nossa História
+            </p>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Quem está por trás da ANAVI?</h1>
+            <p class="text-gray-600 mt-2 max-w-xl mx-auto text-sm">
+                Conheça a história e o carinho por trás de cada detalhe do nosso trabalho.
+            </p>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+        <!-- Tarjeta de Historia personal con foto -->
+        <div class="bg-white/90 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-xl border border-gray-100 grid md:grid-cols-12 gap-8 items-center">
+            
+            <!-- Foto de Maria y Ana Vitória -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-2 bg-gradient-to-tr from-anavi-cta via-anavi-soft to-pink-300 shadow-xl">
+                    <img src="imagenes/maria-e-ana.jpg.png" alt="Maria e Ana Vitória" class="w-full h-full object-cover rounded-full border-4 border-white shadow-inner">
+                </div>
+            </div>
+
+            <!-- Texto de Historia -->
+            <div class="md:col-span-7 space-y-4 text-center md:text-left">
+                <h2 class="text-2xl font-extrabold text-gray-900">
+                    Oiiiii! Eu sou a Maria, a mamãe por trás da ANAVI 🩵
+                </h2>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Sou mãe da <strong>Ana Vitória</strong>, minha maior inspiração e também quem dá nome à marca (<strong>ANA + VI</strong>).
+                </p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    A <strong>ANAVI</strong> nasceu do meu amor por criar, personalizar e transformar ideias em detalhes especiais.
+                </p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Cada pedido é feito com muito carinho e cuidado, para que você receba algo único e especial na sua casa.
+                </p>
+                <div class="pt-2">
+                    <span class="inline-block bg-anavi-light text-anavi-cta font-bold text-sm px-4 py-2 rounded-full border border-anavi-soft">
+                        Seja bem-vind@ à ANAVI! ✨
+                    </span>
+                </div>
+            </div>
+        </div>
+
+</section>
+        <!-- PÁGINA 3: CONTATO -->
+        <section id="page-contato" class="page-tab hidden">
+            <div class="bg-anavi-light/40 py-12 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <p class="inline-block bg-anavi-cta text-white text-xs font-bold px-3.5 py-1.5 rounded-full uppercase mb-2">
+                        <i class="fa-brands fa-whatsapp mr-1" aria-hidden="true"></i> Atendimento direto
+                    </p>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Fale com a Equipe ANAVI</h1>
+                    <p class="text-gray-600 mt-2 max-w-xl mx-auto text-sm">
+                        Estamos prontos para tirar dúvidas sobre seus ímãs, prazos de envio ou ajudar com suas fotos!
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 py-12">
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-2xl font-bold text-gray-800">Canais de contato</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Prefere encomendar diretamente ou tirar dúvidas sobre o envio das fotos? Entre em contato pelo WhatsApp oficial.
+                        </p>
+
+                        <div class="space-y-4">
+    <!-- WhatsApp -->
+    <div class="flex items-center gap-3.5 p-3.5 bg-anavi-light/60 rounded-2xl border border-anavi-soft">
+        <div class="w-12 h-12 bg-green-600 text-white rounded-xl flex items-center justify-center text-xl shrink-0"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></div>
+        <div>
+            <span class="text-xs text-gray-600 font-semibold block">WhatsApp oficial</span>
+            <a data-wa="Olá ANAVI! Gostaria de saber mais sobre os ímãs personalizados." target="_blank" rel="noopener" class="font-bold text-base text-gray-800 hover:text-anavi-cta transition">(47) 99679-4457</a>
+        </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="flex items-center gap-3.5 p-3.5 bg-pink-50 rounded-2xl border border-pink-100">
+        <div class="w-12 h-12 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white rounded-xl flex items-center justify-center text-xl shrink-0"><i class="fa-brands fa-instagram" aria-hidden="true"></i></div>
+        <div>
+            <span class="text-xs text-gray-600 font-semibold block">Instagram</span>
+            <a href="https://www.instagram.com/giftsanavi/" target="_blank" rel="noopener" class="font-bold text-base text-gray-800 hover:text-pink-600 transition">@giftsanavi</a>
+        </div>
+    </div>
+
+    <!-- TikTok -->
+    <div class="flex items-center gap-3.5 p-3.5 bg-gray-50 rounded-2xl border border-gray-200">
+        <div class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center text-xl shrink-0"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></div>
+        <div>
+            <span class="text-xs text-gray-600 font-semibold block">TikTok</span>
+            <a href="https://www.tiktok.com/@giftsanavi" target="_blank" rel="noopener" class="font-bold text-base text-gray-800 hover:text-black transition">@giftsanavi</a>
+        </div>
+    </div>
+
+    <!-- Horario -->
+    <div class="flex items-center gap-3.5 p-3.5 bg-gray-50 rounded-2xl border border-gray-200">
+        <div class="w-12 h-12 bg-gray-800 text-white rounded-xl flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <div>
+            <span class="text-xs text-gray-600 font-semibold block">Horário de atendimento</span>
+            <span class="font-bold text-sm text-gray-800">Segunda a Sábado: 08h às 18h</span>
+        </div>
+    </div>
+</div>
+
+                        <a data-wa="Olá ANAVI! Gostaria de tirar dúvidas sobre os ímãs." target="_blank" rel="noopener" class="w-full bg-anavi-cta hover:bg-anavi-cta-dark text-white font-bold py-3.5 rounded-xl shadow transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> Iniciar conversa no WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="bg-anavi-bg p-6 rounded-2xl border border-anavi-soft text-center space-y-4">
+                        <div class="w-16 h-16 bg-anavi-cta text-white rounded-full flex items-center justify-center mx-auto text-2xl shadow-md"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></div>
+                        <h2 class="font-bold text-lg text-gray-900">Garantia ANAVI</h2>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Todos os nossos ímãs possuem manta magnética de alta aderência em 100% da superfície traseira, laminação brilhante e acabamento impecável em tamanho 5x5 cm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer data-bg class="bg-slate-900 text-white pt-12 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="bg-anavi-cta px-4 py-1.5 rounded-xl inline-block">
+                        <span class="anavi-logo-text text-2xl font-normal text-white">Anavi</span>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        Transformando memórias em ímãs fotográficos impermeáveis de alta aderência 5x5 cm (imagem inteira).
+                    </p>
+                </div>
+                <div>
+                    <h2 class="font-bold text-sm mb-3 text-white">Navegação</h2>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#/" class="hover:text-white transition">Início</a></li>
+                        <li><a href="#/produtos" class="hover:text-white transition">Ímãs Personalizados</a></li>
+                        <li><a href="#/contato" class="hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+    <h2 class="font-bold text-sm mb-3 text-white">Contato e Redes</h2>
+    <p class="text-xs text-slate-300 mb-2">
+        <a data-wa target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-green-400 text-sm" aria-hidden="true"></i> (47) 99679-4457
+        </a>
+    </p>
+    <p class="text-xs text-slate-300 mb-2">
+        <a href="https://www.instagram.com/giftsanavi/" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2">
+            <i class="fa-brands fa-instagram text-pink-400 text-sm" aria-hidden="true"></i> @giftsanavi
+        </a>
+    </p>
+    <p class="text-xs text-slate-300 mb-2">
+        <a href="https://www.tiktok.com/@giftsanavi" target="_blank" rel="noopener" class="hover:text-white transition flex items-center gap-2">
+            <i class="fa-brands fa-tiktok text-slate-200 text-sm" aria-hidden="true"></i> @giftsanavi
+        </a>
+    </p>
+    <p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-clock text-anavi mr-1.5" aria-hidden="true"></i> Seg a Sáb: 08h às 18h</p>
+</div>
+                <div>
+                    <h2 class="font-bold text-sm mb-3 text-white">Garantia ANAVI</h2>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Manta magnética em 100% da superfície traseira e camada de laminação brilhante contra água e arranhões.
+                    </p>
+                </div>
+            </div>
+            <div class="pt-6 text-slate-400 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
+                <span>© 2026 ANAVI Ímãs Personalizados. Todos os direitos reservados.</span>
+                <div class="flex items-center gap-4 text-lg">
+                    <!-- Os links de Instagram e TikTok aparecem quando preenchidos em CONFIG.social (script.js) -->
+                    <a data-social="instagram" hidden target="_blank" rel="noopener" aria-label="Instagram da ANAVI" class="hover:text-white transition"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a data-social="tiktok" hidden target="_blank" rel="noopener" aria-label="TikTok da ANAVI" class="hover:text-white transition"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+                    <a data-wa target="_blank" rel="noopener" aria-label="WhatsApp da ANAVI" class="hover:text-white transition"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
